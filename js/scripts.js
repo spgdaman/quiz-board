@@ -32,7 +32,7 @@ $(document).ready(function() {
       // console.log(results);
 
       results.forEach(function(iteration) {
-        if(iteration == "123123"){
+        if(iteration == "123246"){
           score += 1;
         }
         else if(iteration == "Function literal") {
@@ -44,7 +44,14 @@ $(document).ready(function() {
         else if(iteration == "Invocation expression") {
           score +=1;
         }
+        else if(iteration == "Object creation expression"){
+          score +=1;
+        }
       });
+
+      var finalScore = (score/5)*100;
+
+      alert(finalScore);
 
       // if (questionOne[0].checked) {
       //   alert("That is the correct answer");
