@@ -1,27 +1,7 @@
-// function checkAnswer(){
-//   var questionOne = document.getElementsbyName("answer1");
-//
-//   if (questionOne[0].checked) {
-//     alert("THat is the correct answer");
-//     console.log("THat is the correct answer");
-//   }
-// }
-
-// var response = 0;
-// $("input[type=radio]:checked").each(function() {
-//   response += parseInt($(this).val());
-//   alert(response);
-// });
-// $('#submit').val(response);
-
-
 $(document).ready(function() {
 
-  $("#submit").submit(function(e) {
-    e.preventDefault();
-  });
-
-  $("#submit").click(function() {
+  $("#submit").click(function(event) {
+    event.preventDefault();
 
     var questionOneAnswer = $("input:radio[name=answer1]:checked").val();
     var questionTwoAnswer = $("input:radio[name=answer2]:checked").val();
@@ -55,16 +35,22 @@ $(document).ready(function() {
     var finalScore = (score / 5) * 100;
 
     $("form").hide("slow");
-    console.log(finalScore);
-    $(".final-score .output").html(finalScore);
 
+
+
+
+    function criteria() {
+      if(finalScore>80) {
+        $(".compliment").append("<p>You have excellently passed the quiz</p>");
+        $(".final-score .output").html(finalScore);
+      }
+    }
+
+    criteria();
     $(".final-score").show();
 
 
-    // if (questionOne[0].checked) {
-    //   alert("That is the correct answer");
-    //   console.log("THat is the correct answer");
-    // }
+
 
   });
 
