@@ -11,3 +11,11 @@
 .question{
   font-weight: bold;
 }
+
+.final-score{
+  display: none;
+}
+
+.align{
+  text-align: center;
+}
