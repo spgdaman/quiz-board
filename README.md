@@ -22,6 +22,7 @@ HTML, CSS and JavaScript.
 
 * simonwaigi@outlook.com
 
-## License
+### License
 
-This project is licensed under the GNU Open Source License.
+*{This project is licensed under the GNU Open Source License.}*
+Copyright (c) Simon Gatheru Waigi
