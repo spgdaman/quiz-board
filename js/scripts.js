@@ -18,16 +18,38 @@
 $(document).ready(function() {
 
   $("#submit").click(function() {
-    function checkAnswer(){
-      var questionOne = document.getElementsbyName("answer1");
+      var questionOneAnswer = $("input:radio[name=answer1]:checked").val();
+      var questionTwoAnswer = $("input:radio[name=answer2]:checked").val();
+      var questionThreeAnswer = $("input:radio[name=answer3]:checked").val();
+      var questionFourAnswer = $("input:radio[name=answer4]:checked").val();
+      var questionFiveAnswer = $("input:radio[name=answer5]:checked").val();
 
-      alert(questionOne);
+      var score = 0;
+
+      var results = [questionOneAnswer, questionTwoAnswer, questionThreeAnswer, questionFourAnswer, questionFiveAnswer];
+
+      // alert(results);
+      // console.log(results);
+
+      results.forEach(function(iteration) {
+        if(iteration == "123123"){
+          score += 1;
+        }
+        else if(iteration == "Function literal") {
+          score +=1;
+        }
+        else if(iteration == "Stand-alone expressions") {
+          score +=1;
+        }
+        else if(iteration == "Invocation expression") {
+          score +=1;
+        }
+      });
+
       // if (questionOne[0].checked) {
       //   alert("That is the correct answer");
       //   console.log("THat is the correct answer");
       // }
-    }
-
 
   });
 
