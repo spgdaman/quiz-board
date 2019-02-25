@@ -1,41 +1,14 @@
 $(document).ready(function () {
 
   $("#submit").click(function () {
-    alert("Hey there! I work as well!");
+    alert("Hey there! I work as well 1");
+    alert("Hey there! I work as well 2");
 
-    var questionOneChoiceOne = document.getElementbyId("#option-1");
-    var questionOneChoiceTwo = document.getElementbyId("#option-2");
-    var questionOneChoiceThree = document.getElementbyId("#option-3");
-    var questionOneChoiceFour = document.getElementbyId("#option-4");
+    var questionOne = document.getElementsbyName("answer1");
 
-    var questionTwoChoiceOne = document.getElementbyId("#option-1");
-    var questionTwoChoiceTwo = document.getElementbyId("#option-2");
-    var questionTwoChoiceThree = document.getElementbyId("#option-3");
-    var questionTwoChoiceFour = document.getElementbyId("#option-4");
-
-    var questionThreeChoiceOne = document.getElementbyId("#option-1");
-    var questionThreeChoiceTwo = document.getElementbyId("#option-2");
-    var questionThreeChoiceThree = document.getElementbyId("#option-3");
-    var questionThreeChoiceFour = document.getElementbyId("#option-4");
-
-    var questionFourChoiceOne = document.getElementbyId("#option-1");
-    var questionFourChoiceTwo = document.getElementbyId("#option-2");
-    var questionFourChoiceThree = document.getElementbyId("#option-3");
-    var questionFourChoiceFour = document.getElementbyId("#option-4");
-
-    var answerQuestionOne = "123123";
-    var answerQuestionTwo = "Function literal";
-    var answerQuestionThree = "Stand-alone expressions";
-    var answerQuestionFour = "Invocation expression";
-    var answerQuestionFive = "Invocation expression";
-
-    console.log(questionOneChoiceOne);
-    confirm(questionOneChoiceOne);
-    return questionOneChoiceOne;
-
-    alert("Hey there! I work as well!");
-
-
+    if (questionOne[0]) {
+      alert("THat is the correct answer");
+    }
 
 
   });
