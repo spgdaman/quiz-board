@@ -39,13 +39,13 @@ $(document).ready(function() {
     function criteria() {
       if (finalScore > 80) {
         $(".compliment").append("<p>You have Excellently passed the quiz</p>");
-        $(".final-score .output").html(finalScore);
+        $(".final-score .output").html(finalScore).show();
       } else if (finalScore >= 50 && finalScore <= 80) {
         $(".compliment").append("<p>You have Fairly passed the quiz</p>");
-        $(".final-score .output").html(finalScore);
+        $(".final-score .output").html(finalScore).show();
       } else {
         $(".compliment").append("<p>You have scored Poorly, Retake The Test!</p>");
-        $(".final-score .output").html(finalScore);
+        $(".final-score .output").html(finalScore).show();
       }
     }
 
