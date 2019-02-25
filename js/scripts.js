@@ -18,45 +18,46 @@
 $(document).ready(function() {
 
   $("#submit").click(function() {
-      var questionOneAnswer = $("input:radio[name=answer1]:checked").val();
-      var questionTwoAnswer = $("input:radio[name=answer2]:checked").val();
-      var questionThreeAnswer = $("input:radio[name=answer3]:checked").val();
-      var questionFourAnswer = $("input:radio[name=answer4]:checked").val();
-      var questionFiveAnswer = $("input:radio[name=answer5]:checked").val();
 
-      var score = 0;
+    var questionOneAnswer = $("input:radio[name=answer1]:checked").val();
+    var questionTwoAnswer = $("input:radio[name=answer2]:checked").val();
+    var questionThreeAnswer = $("input:radio[name=answer3]:checked").val();
+    var questionFourAnswer = $("input:radio[name=answer4]:checked").val();
+    var questionFiveAnswer = $("input:radio[name=answer5]:checked").val();
 
-      var results = [questionOneAnswer, questionTwoAnswer, questionThreeAnswer, questionFourAnswer, questionFiveAnswer];
+    var score = 0;
 
-      // alert(results);
-      // console.log(results);
+    var results = [questionOneAnswer, questionTwoAnswer, questionThreeAnswer, questionFourAnswer, questionFiveAnswer];
 
+
+    function gradeScore() {
       results.forEach(function(iteration) {
-        if(iteration == "123246"){
+        if (iteration == "123246") {
+          score += 1;
+        } else if (iteration == "Function literal") {
+          score += 1;
+        } else if (iteration == "Stand-alone expressions") {
+          score += 1;
+        } else if (iteration == "Invocation expression") {
+          score += 1;
+        } else if (iteration == "Object creation expression") {
           score += 1;
         }
-        else if(iteration == "Function literal") {
-          score +=1;
-        }
-        else if(iteration == "Stand-alone expressions") {
-          score +=1;
-        }
-        else if(iteration == "Invocation expression") {
-          score +=1;
-        }
-        else if(iteration == "Object creation expression"){
-          score +=1;
-        }
       });
+    }
 
-      var finalScore = (score/5)*100;
+    gradeScore();
 
-      alert(finalScore);
+    var finalScore = (score / 5) * 100;
 
-      // if (questionOne[0].checked) {
-      //   alert("That is the correct answer");
-      //   console.log("THat is the correct answer");
-      // }
+    alert(finalScore);
+
+    $("form").after("<h1>Your final score is: </h1>" + finalScore + "%");
+
+    // if (questionOne[0].checked) {
+    //   alert("That is the correct answer");
+    //   console.log("THat is the correct answer");
+    // }
 
   });
 
