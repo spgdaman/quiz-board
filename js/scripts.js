@@ -7,23 +7,34 @@
 //   }
 // }
 
-
+// var response = 0;
+// $("input[type=radio]:checked").each(function() {
+//   response += parseInt($(this).val());
+//   alert(response);
+// });
+// $('#submit').val(response);
 
 
 $(document).ready(function() {
 
   $("#submit").click(function() {
-    alert("Hey there! I work as well 1");
-    // var questionOneInput = $("#option-1['type=radio']:checked");
-    var responses = 0;
-    $("input[type=radio]:checked").each(function() {
-      responses += parseInt($(this).val());
-      alert(responses);
-    });
-    $('#submit').val(responses);
+    function checkAnswer(){
+      var questionOne = document.getElementsbyName("answer1");
 
+      alert(questionOne);
+      // if (questionOne[0].checked) {
+      //   alert("That is the correct answer");
+      //   console.log("THat is the correct answer");
+      // }
+    }
 
 
   });
 
 });
+
+// var answerQuestionOne = "123123";
+// var answerQuestionTwo = "Function literal";
+// var answerQuestionThree = "Stand-alone expressions";
+// var answerQuestionFour = "Invocation expression";
+// var answerQuestionFive = "Object creation expression";
