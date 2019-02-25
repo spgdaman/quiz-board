@@ -30,12 +30,6 @@ $(document).ready(function() {
       });
     }
 
-    gradeScore();
-
-    var finalScore = (score / 5) * 100;
-
-    $("form").hide("slow");
-
     function criteria() {
       if (finalScore > 80) {
         $(".compliment").append("<p>You have Excellently passed the quiz</p>");
@@ -48,6 +42,12 @@ $(document).ready(function() {
         $(".final-score .output").html(finalScore);
       }
     }
+
+    gradeScore();
+
+    var finalScore = (score / 5) * 100;
+
+    $("form").hide("slow");
 
     criteria();
     $(".final-score").show(slow);
