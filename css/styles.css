@@ -11,3 +11,7 @@
 .question{
   font-weight: bold;
 }
+
+.final-score{
+  display: none;
+}

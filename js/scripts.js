@@ -17,6 +17,10 @@
 
 $(document).ready(function() {
 
+  $("#submit").submit(function(e) {
+    e.preventDefault();
+  });
+
   $("#submit").click(function() {
 
     var questionOneAnswer = $("input:radio[name=answer1]:checked").val();
@@ -50,9 +54,12 @@ $(document).ready(function() {
 
     var finalScore = (score / 5) * 100;
 
-    alert(finalScore);
+    $("form").hide("slow");
+    console.log(finalScore);
+    $(".final-score .output").html(finalScore);
 
-    $("form").after("<h1>Your final score is: </h1>" + finalScore + "%");
+    $(".final-score").show();
+
 
     // if (questionOne[0].checked) {
     //   alert("That is the correct answer");
