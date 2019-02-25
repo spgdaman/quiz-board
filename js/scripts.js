@@ -1,6 +1,7 @@
 $(document).ready(function () {
 
   $("#submit").click(function () {
+    alert("Hey there! I work as well!");
 
     var questionOneChoiceOne = document.getElementbyId("#option-1");
     var questionOneChoiceTwo = document.getElementbyId("#option-2");
