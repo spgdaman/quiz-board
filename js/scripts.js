@@ -1,25 +1,29 @@
-$(document).ready(function () {
+// function checkAnswer(){
+//   var questionOne = document.getElementsbyName("answer1");
+//
+//   if (questionOne[0].checked) {
+//     alert("THat is the correct answer");
+//     console.log("THat is the correct answer");
+//   }
+// }
 
-  $("#submit").click(function () {
+
+
+
+$(document).ready(function() {
+
+  $("#submit").click(function() {
     alert("Hey there! I work as well 1");
-    alert("Hey there! I work as well 2");
+    // var questionOneInput = $("#option-1['type=radio']:checked");
+    var responses = 0;
+    $("input[type=radio]:checked").each(function() {
+      responses += parseInt($(this).val());
+      alert(responses);
+    });
+    $('#submit').val(responses);
 
-    var questionOne = document.getElementsbyName("answer1");
-
-    if (questionOne[0]) {
-      alert("THat is the correct answer");
-    }
 
 
   });
 
-  // console.log("I work!");
-  // $("form").hide();
 });
-
-//
-// var questionOneChoiceOne = $("#question-1 #option-1").value();
-// // console.log("Hey! I work!");
-// // console.log(questionOneChoiceOne);
-// alert("I work too!");
-// alert(questionOneChoiceOne);
