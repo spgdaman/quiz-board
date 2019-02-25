@@ -24,5 +24,5 @@ HTML, CSS and JavaScript.
 
 ## License
 
-*This project is licensed under the GNU Open Source License.*
 Copyright (c) Simon Gatheru Waigi
+This project is licensed under the [GNU Open Source License](LICENSE).
