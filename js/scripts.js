@@ -1,9 +1,5 @@
 $(document).ready(function() {
 
-<<<<<<< HEAD
-
-
-=======
   $("#submit").click(function(event) {
     event.preventDefault();
 
@@ -54,15 +50,16 @@ $(document).ready(function() {
         $(".final-score .output").html(finalScore);
       }
     }
->>>>>>> get-by-name
 
     criteria();
     $(".final-score").show(slow);
 
   });
 
+});
 
-
-<<<<<<< HEAD
-
->>>>>>> get-by-name
+// var answerQuestionOne = "123123";
+// var answerQuestionTwo = "Function literal";
+// var answerQuestionThree = "Stand-alone expressions";
+// var answerQuestionFour = "Invocation expression";
+// var answerQuestionFive = "Object creation expression";
