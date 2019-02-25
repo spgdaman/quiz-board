@@ -1,21 +1,21 @@
-.heading{
+.heading {
   text-align: center;
   font-weight: bold;
   font-size: 2rem;
 }
 
-.card{
+.card {
   padding: 25px;
 }
 
-.question{
+.question {
   font-weight: bold;
 }
 
-.final-score{
+.final-score {
   display: none;
 }
 
-.align{
+.align {
   text-align: center;
 }
