@@ -50,7 +50,7 @@ $(document).ready(function() {
     $("form").hide("slow");
 
     criteria();
-    $(".final-score").show(slow);
+    $(".final-score").toggle();
 
   });
 
