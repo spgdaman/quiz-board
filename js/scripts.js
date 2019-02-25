@@ -36,21 +36,23 @@ $(document).ready(function() {
 
     $("form").hide("slow");
 
-
-
-
     function criteria() {
       if(finalScore>80) {
-        $(".compliment").append("<p>You have excellently passed the quiz</p>");
+        $(".compliment").append("<p>You have Excellently passed the quiz</p>");
+        $(".final-score .output").html(finalScore);
+      }
+      else if(finalScore>=50 && finalScore<= 80) {
+        $(".compliment").append("<p>You have Fairly passed the quiz</p>");
+        $(".final-score .output").html(finalScore);
+      }
+      else {
+        $(".compliment").append("<p>You have scored Poorly, Retake The Test!</p>");
         $(".final-score .output").html(finalScore);
       }
     }
 
     criteria();
-    $(".final-score").show();
-
-
-
+    $(".final-score").show(slow);
 
   });
 
